@@ -134,7 +134,7 @@
         <li><a href="#about">About us</a></li>
         <li><a href="#services">Berita</a></li>
         <li><a href="#stats-counter">Sosial Media</a></li>
-        <li><a href="/login">Login Admin</a></li>
+        <li><a href="/admin">Login Admin</a></li>
       </ul>
     </div>
 

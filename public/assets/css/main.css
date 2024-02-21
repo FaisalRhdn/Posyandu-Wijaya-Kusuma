@@ -21,7 +21,7 @@
 :root {
   --color-default: #222222;
   --color-primary: #0aabd9;
-  --color-secondary: #f85a40;
+  --color-secondary: #1397e4;
 }
 
 /* Smooth scroll behavior */
@@ -152,7 +152,7 @@ section {
 .breadcrumbs nav ol li+li::before {
   display: inline-block;
   padding-right: 10px;
-  color: var(--color-secondary);
+  color: var(--color-primary);
   content: "/";
 }
 
@@ -166,7 +166,7 @@ section {
   right: 15px;
   bottom: -15px;
   z-index: 99999;
-  background: var(--color-secondary);
+  background: var(--color-primary);
   width: 44px;
   height: 44px;
   border-radius: 50px;
@@ -237,6 +237,34 @@ section {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
+/* Style untuk selamat datang dan avatar */
+.welcome-container {
+  text-align: center;
+  color: #fff;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 10px;
+}
+
+/* Style untuk formulir logout */
+.logout-form {
+  text-align: center;
+}
+
+.logout-button {
+  background-color: #1397e4;
+  color: #fff;
+  border: none;
+  padding: 10% 10%;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 .topbar {
   background: #00796b;
   height: 40px;

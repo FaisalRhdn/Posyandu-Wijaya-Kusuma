@@ -32,13 +32,34 @@
             <li><a href="#services">Berita Terbaru</a></li>
             <li><a href="#stats-counter">Social Media</a></li>
             <li><a href="#contact">Contact</a></li>
-          </ul>
+            <li>
+            <div class="welcome-container">
+            <a>@if (auth()->check())
+            Welcome, {{ auth()->user()->name }}</a>
+            </div>
+            </li>
+            <li>
+            <img src="{{ asset('storage/' . auth()->user()->avatar) }}" alt="User Avatar" class="avatar">
+            </li>
+            <li>
+             <form action="{{ route('voyager.logout') }}" method="POST" class="logout-form">
+            @csrf
+            <button type="submit" class="logout-button">Logout</button>
+            </form>
+             @else
+            <div class="login-container">
+            <a href="{{ route('voyager.login') }}" class="login-button">Login</a>
+            </div>
+            @endif
+            </li>
+          </ul> 
         </nav><!-- .navbar -->
 
         <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
         <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
 
       </div>
+
     </header><!-- End Header -->
       
   <!-- ======= Hero Section ======= -->

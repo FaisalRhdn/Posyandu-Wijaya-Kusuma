@@ -12,7 +12,12 @@ use App\Http\Controllers\Front\FrontLandingController;
 use App\Http\Controllers\Front\FrontPostController;
 use App\Http\Controllers\Front\FrontMenuController;
 use App\Http\Controllers\Front\FrontContactController;
-
+use Illuminate\Support\Str;
+use TCG\Voyager\Events\Routing;
+use TCG\Voyager\Events\RoutingAdmin;
+use TCG\Voyager\Events\RoutingAdminAfter;
+use TCG\Voyager\Events\RoutingAfter;
+use TCG\Voyager\Facades\Voyager;
 
 use Illuminate\Support\Facades\Route;
 
@@ -29,6 +34,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [FrontLandingController::class, 'index'])->name('landing');
 
+Route::post('/logout', 'Auth\LoginController@logout')->name('voyager.logout');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
