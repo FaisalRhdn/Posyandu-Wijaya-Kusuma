@@ -15,4 +15,4 @@ class Balita extends Model
         'bb_lahir' => 'decimal:1',
         'pb_lahir' => 'decimal:1'
     ];
-}
+} 
