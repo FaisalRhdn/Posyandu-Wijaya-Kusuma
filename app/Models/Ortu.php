@@ -9,9 +9,9 @@ class Ortu extends Model
 {
     use HasFactory;
     protected $primaryKey = 'id_ortu';
-    public $incrementing = false;
     public function balitas()
     {
-        return $this->hasMany(Balita::class, 'id_ortu', 'id_ortu');
+        return $this->BelongsTo(Balita::class, 'id_balita', 'id_balita');
+            
     }
 }
