@@ -16,12 +16,4 @@ class Balita extends Model
         'bb_lahir' => 'decimal:1',
         'pb_lahir' => 'decimal:1'
     ];
-
-    public static function index()
-    {
-        DB::table('balita')
-            ->update([
-                'umur_tahun' => DB::raw('TIMESTAMPDIFF(YEAR, tgl_lahir, CURDATE())'),
-            ]);
-        }
 } 
