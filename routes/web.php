@@ -12,6 +12,7 @@ use App\Http\Controllers\Front\FrontLandingController;
 use App\Http\Controllers\Front\FrontPostController;
 use App\Http\Controllers\Front\FrontMenuController;
 use App\Http\Controllers\Front\FrontContactController;
+use App\Http\Controllers\Voyager\BalitaController;
 use Illuminate\Support\Str;
 use TCG\Voyager\Events\Routing;
 use TCG\Voyager\Events\RoutingAdmin;
@@ -33,6 +34,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [FrontLandingController::class, 'index'])->name('landing');
+
+Route::put('/update-umur-column', [BalitaController::class, 'updateUmurColumn'])->name('balitas.updateUmurColumn');
 
 Route::post('/logout', 'Auth\LoginController@logout')->name('voyager.logout');
 
